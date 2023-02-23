@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#040101"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="2"
+        android:layout_weight="0"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Lumini"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/prosto"
+            android:text="Lumini"
+            android:layout_marginLeft="50dp"
+            android:textColor="#17ABEB"
+            android:textSize="38dp" />
+
+        <TextView
+            android:id="@+id/Park"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/prosto"
+            android:text="Park"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#B7EB4A"
+            android:textSize="38dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.1"
+        android:weightSum="3">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="0.5">
+
+        </View>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/logo">
+
+        </ImageView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="0.5">
+        </View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2.7"
+        android:weightSum="3">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:weightSum="7">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3">
+            </View>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_email"
+                android:layout_weight="1"
+                app:boxStrokeColor="#0E87C3"
+                app:hintTextColor="#0E87C3"
+                app:boxStrokeWidth="2dp"
+                android:hint="Email">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailInit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_input"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/inria"
+                    app:backgroundTint="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3">
+            </View>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                app:endIconMode="password_toggle"
+                android:layout_weight="1"
+                android:hint="Password">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordInit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@null"
+                    android:fontFamily="@font/inria"
+                    app:boxStrokeColor="#0E87C3"
+                    app:hintTextColor="#0E87C3"
+                    app:boxStrokeWidth="2dp"
+                    android:background="@drawable/round_input"
+                    android:inputType="textPassword"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/forgottenPassword"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/inria"
+                android:text="Did you forget your password?"
+                android:onClick="forgotPassword"
+                android:textColor="#BF1515"
+                android:textSize="15dp"
+                android:textAlignment="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7">
+            </View>
+
+            <Button
+                android:id="@+id/logIn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                app:backgroundTint="@null"
+                android:background="@drawable/green_button"
+                android:text="Log In"
+                android:onClick="login"
+                android:fontFamily="@font/inria"
+                android:textColor="#000000">
+
+            </Button>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5">
+            </View>
+
+            <TextView
+                android:id="@+id/newAccount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:fontFamily="@font/inria"
+                android:text="New account?"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/signUp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                app:backgroundTint="@null"
+                android:background="@drawable/blue_button"
+                android:text="Sign Up"
+                android:onClick="signUp"
+                android:fontFamily="@font/inria"
+                android:textColor="#000000">
+
+            </Button>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </View>
+
+    </LinearLayout>
+
+
+</LinearLayout>

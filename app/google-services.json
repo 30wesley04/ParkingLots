@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302988655951",
+    "project_id": "luminipark-d68e0",
+    "storage_bucket": "luminipark-d68e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302988655951:android:917cc20b4cd17f0b1d993a",
+        "android_client_info": {
+          "package_name": "com.example.parkinglots"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302988655951-i0vqv3n0qe7i9v4q56osdve1ogve79k5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeQ_CctxIHIAv6VEh6cY_hl5pRq7hBqx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302988655951-i0vqv3n0qe7i9v4q56osdve1ogve79k5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

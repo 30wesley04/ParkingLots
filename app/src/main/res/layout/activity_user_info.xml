@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="7"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:boxStrokeColor="#17ABEB"
+            app:hintTextColor="#17ABEB"
+            android:hint="First Name">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lastEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:boxStrokeColor="#17ABEB"
+            app:hintTextColor="#17ABEB"
+            android:hint="Last Name">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lastEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:boxStrokeColor="#17ABEB"
+            app:hintTextColor="#17ABEB"
+            android:hint="Email">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@null"
+            app:boxStrokeColor="#17ABEB"
+            app:hintTextColor="#17ABEB"
+            android:hint="Phone number">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:background="@drawable/green_button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="saveData"
+            android:textColor="@color/black"
+            android:layout_weight="0.001"
+
+            android:fontFamily="@font/inria"
+            android:text="Save data" />
+
+        <Button
+            android:id="@+id/logOutButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:background="@drawable/blue_button"
+            android:layout_gravity="center_horizontal"
+
+            android:textColor="@color/black"
+            android:layout_weight="0.001"
+            android:layout_marginTop="70dp"
+
+            android:fontFamily="@font/inria"
+            android:onClick="callLogOut"
+            android:text="Log out" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.75"
+                android:weightSum="4">
+
+                <ImageButton
+                    android:id="@+id/homeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_home" />
+
+                <ImageButton
+                    android:id="@+id/qrButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="access"
+                    android:backgroundTint="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_qr" />
+
+                <ImageButton
+                    android:id="@+id/statusButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_timer" />
+
+                <ImageButton
+                    android:id="@+id/accountButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_account"
+                    android:backgroundTint="#575656"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Home"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inria"
+                    android:gravity="center">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Access"
+                    android:textSize="15dp"
+                    android:onClick="access"
+                    android:fontFamily="@font/inria"
+                    android:gravity="center">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inria"
+                    android:gravity="center">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Profile"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/inria"
+                    android:gravity="center"
+                    android:background="#575656">
+
+                </TextView>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
